@@ -6,7 +6,7 @@ function MasterVolume(x, y) {
     this.label = 'Master Volume';
   
     // Create the faders
-    var MasterFader = new Fader(x + (this.width / 2.3), y + 95, '');
+    var MasterFader = new Fader(x + (this.width / 2.3), y + 55, 15, 250, '');
   
     this.draw = function() {
       // Draw the panel background

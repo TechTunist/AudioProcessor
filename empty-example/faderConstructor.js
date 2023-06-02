@@ -1,9 +1,9 @@
 class Fader {
-    constructor(x, y, label) {
+    constructor(x, y, width, height, label) {
       this.x = x;
       this.y = y;
-      this.width = 15;
-      this.height = 150;
+      this.width = width;
+      this.height = height;
       this.knobSize = this.width;
       this.knobY = this.y + this.height - this.knobSize;
       this.minY = this.y;
@@ -22,7 +22,7 @@ class Fader {
   
         // Draw the fader knob
         fill(150);
-        rect(this.x - 3.25, this.knobY, this.width * 1.5, this.knobSize);
+        rect(this.x - 6, this.knobY, this.width * 1.8, this.knobSize);
       };
   
       // Updating the value based on the knob position

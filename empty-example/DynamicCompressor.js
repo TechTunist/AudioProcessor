@@ -13,8 +13,8 @@ function DynamicCompressor(x, y) {
     var thresholdKnob = new Knob(x + (this.width * 0.65), y + 200, 60, -PI, PI, 0, 'threshold');
   
     // Create the faders
-    var cutoffFader = new Fader(x + (this.width * 0.345), 330, 'dry/wet');
-    var resonanceFader = new Fader(x + (this.width * 0.625), 330, 'output');
+    var cutoffFader = new Fader(x + (this.width * 0.345), 330, 15, 150, 'dry/wet');
+    var resonanceFader = new Fader(x + (this.width * 0.625), 330, 15, 150, 'output');
   
     this.draw = function() {
       // Draw the panel background

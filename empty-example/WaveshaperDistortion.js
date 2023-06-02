@@ -10,8 +10,8 @@ function WaveshaperDistortion(x, y) {
     var decayKnob = new Knob(x + (this.width * 0.75), y + 100, 60, -PI, PI, 0, 'oversample');
   
     // Create the faders
-    var cutoffFader = new Fader(x + (this.width * 0.22), y + 180, 'dry/wet');
-    var resonanceFader = new Fader(x + (this.width * 0.72), y + 180, 'output');
+    var cutoffFader = new Fader(x + (this.width * 0.22), y + 180, 15, 150, 'dry/wet');
+    var resonanceFader = new Fader(x + (this.width * 0.72), y + 180, 15, 150, 'output');
   
     this.draw = function() {
       // Draw the panel background
