@@ -45,8 +45,11 @@ function setup(){
     // jumpButton.position(250,20);
     // jumpButton.mousePressed(jumpSound);
 
-    lowPassFilter = new LowPassFilter(20,20);
-    dynamicCompressor = new DynamicCompressor(250,20);
+    lowPassFilter = new LowPassFilter(width * 0.28, 20);
+    dynamicCompressor = new DynamicCompressor((width / 2) - 175, 20);
+    masterVolume = new MasterVolume((width / 2) + 75, 550);
+    reverb = new Reverb(width * 0.61, 20);
+    waveshaperDistortion = new WaveshaperDistortion((width / 2) - 175, 550);
     
     mySound.playMode('restart');
 
@@ -103,6 +106,9 @@ function draw() {
 
   lowPassFilter.draw();
   dynamicCompressor.draw();
+  masterVolume.draw();
+  reverb.draw();
+  waveshaperDistortion.draw();
 }
 
 
